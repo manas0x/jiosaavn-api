@@ -11,7 +11,8 @@
     "start": "vercel dev",
     "lint": "eslint .",
     "format": "prettier --write \"./**/*.{js,ts,json}\"",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.0",
