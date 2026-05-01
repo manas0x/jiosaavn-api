@@ -1,6 +1,13 @@
 import { configDefaults, defineConfig } from 'vitest/config'
+import { resolve } from 'path'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '#modules': resolve(__dirname, './src/modules'),
+      '#common': resolve(__dirname, './src/common')
+    }
+  },
   test: {
     include: ['src/**/*.spec.ts'],
     exclude: [...configDefaults.exclude],
