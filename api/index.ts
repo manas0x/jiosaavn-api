@@ -1,8 +1,4 @@
-import { Hono } from 'hono'
+import { handle } from 'hono/vercel'
+import app from '../src/server.js'
 
-const app = new Hono()
-
-app.get('/', (c) => {
-  return c.json({ message: 'API is working 🚀' })
-})
-export default app
+export default handle(app)
